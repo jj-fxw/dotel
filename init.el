@@ -12,7 +12,7 @@
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
-;; note
+;; note note
 
 ;; Display Settings
 
