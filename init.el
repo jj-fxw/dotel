@@ -9,6 +9,8 @@
 (set-fringe-mode 10)			; Add fringe
 (menu-bar-mode -1)			; Disable menu bar
 
+(column-number-mode)
+(global-display-line-numbers-mode t)
 
 ;; Display Settings
 
