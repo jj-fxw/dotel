@@ -12,6 +12,8 @@
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
+;; note
+
 ;; Display Settings
 
 (setq visible-bell t)			; Set up the visible bell
