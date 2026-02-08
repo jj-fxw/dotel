@@ -315,7 +315,6 @@
 
 (use-package typescript-mode)
 (add-hook 'typescript-mode-hook 'lsp-deferred)
-(add-hook 'lsp-mode-hook #'lsp-headerline-breadcrumb-mode)
 
 ;; goggles - pulse modified region
 
@@ -649,12 +648,7 @@
   (progn
     (global-set-key (kbd "C-c e") 'eshell)))
 
-<<<<<<< HEAD
-;; thanks
-=======
-
 ;; Thanks!
->>>>>>> 4dcc77cbf793c1297c54a4b33056273830664d04
 ;; This config has drawn on several sources
 ;; I am particualrly indebted to those listed below
 
