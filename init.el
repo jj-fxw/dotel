@@ -279,6 +279,7 @@
 ;; this will only run on graphic sessions
 
 (if (display-graphic-p)
+    (progn
     (straight-use-package
      '(lsp-tailwindcss :type git :host github :repo "merrickluo/lsp-tailwindcss"))
 
@@ -295,7 +296,7 @@
                  js2-mode
                  js-ts-mode
                  clojure-mode))
-        (add-to-list 'lsp-tailwindcss-major-modes tw-major-mode))))
+        (add-to-list 'lsp-tailwindcss-major-modes tw-major-mode)))))
 
 ;; company-mode - provides pop-up autocompletion from the lsp
 
@@ -420,8 +421,9 @@
 
 
 (if (display-graphic-p)
+    (progn
       (use-package vterm
-	:ensure t))
+	:ensure t)))
 
 ;; flyspell - quick spellchecking
 ;; you must have hunspell installed for it to function
@@ -564,9 +566,10 @@
 ;; make sure that --with-tree-sitter was used during compilation before
 ;; enabling this section
 ;; it is left off by default
-;; by default, launches only on graphic sessions
+;; launches only on graphic sessions
 
 ;; (if (display-graphic-p)
+;;     (progn
 ;;     (use-package tree-sitter
 ;;       :mode (("\\.tsx\\'" . tsx-ts-mode)
 ;;              ("\\.js\\'"  . typescript-ts-mode)
@@ -623,7 +626,7 @@
 ;;                  (sh-base-mode . bash-ts-mode)))
 ;;         (add-to-list 'major-mode-remap-alist mapping))
 ;;       :config
-;;       (os/setup-install-grammars))))
+;;       (os/setup-install-grammars)))))
 
 ;;;
 ;;;
