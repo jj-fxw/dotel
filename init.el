@@ -224,8 +224,8 @@
 
 ;; ivy - autocomplete module
 
-(use-package ivy)
-  :diminish
+(use-package ivy
+  :diminish)
   (ivy-mode 1)
 
 (use-package ivy-rich
