@@ -240,7 +240,6 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 20)))
 
-
 ;; which-key - displays tooltips when beginning to chord a command
 
 (use-package which-key
@@ -413,12 +412,14 @@
 ;; vterm - a modern terminal emulator
 ;; note that it is principally compiled code so will launch a compiler
 ;; on first use
+;;
+;; this will not launch in terminal mode as it is assumed that it is
+;; a remote session which may not have CMake available
 
 
 (if (display-graphic-p)
       (use-package vterm
 	:ensure t))
-
 
 ;; flyspell - quick spellchecking
 ;; you must have hunspell installed for it to function
@@ -635,6 +636,8 @@
 (global-set-key (kbd "C-M-]") 'restart-emacs)
 (global-set-key (kbd "C-x C-<return>") 'minimap-mode)
 
+;; the below binding assumes that vterm should only be launched in a
+;; graphic session
 
 (if (display-graphic-p)
     (progn
