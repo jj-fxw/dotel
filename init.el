@@ -646,7 +646,6 @@
   (progn
     (global-set-key (kbd "C-c e") 'eshell)))
 
-
 ;; thanks
 ;; This config has drawn on several sources
 ;; I am particualrly indebted to those listed below
