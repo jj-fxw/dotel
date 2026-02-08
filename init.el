@@ -410,8 +410,12 @@
 ;; note that it is principally compiled code so will launch a compiler
 ;; on first use
 
-(use-package vterm
-    :ensure t)
+
+(if (display-graphic-p)
+      (use-package vterm
+	:ensure t))
+nil
+
 
 ;; flyspell - quick spellchecking
 ;; you must have hunspell installed for it to function
@@ -624,7 +628,14 @@
 
 (global-set-key (kbd "C-M-]") 'restart-emacs)
 (global-set-key (kbd "C-x C-<return>") 'minimap-mode)
-(global-set-key (kbd "C-c e") 'vterm)
+
+
+(if (display-graphic-p)
+    (progn
+      (global-set-key (kbd "C-c e") 'vterm))
+  (progn
+    (global-set-key (kbd "C-c e") 'eshell)))
+
 
 ;; thanks
 ;; This config has drawn on several sources
