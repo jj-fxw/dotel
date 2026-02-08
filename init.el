@@ -401,6 +401,7 @@ b;;  (mouse-wheel-follow-mouse 't)
     (progn
       (minimap-mode 1))
   (progn
+
   (minimap-mode -1)))
 
 ;; magit - for using git with a gui
