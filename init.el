@@ -258,13 +258,12 @@
 
 ;; lsp-mode - activate the language server
 ;; note - install 'python-lsp-server[all]' (pip) before use for python support
+;; for other languages ensure that lsp is installed locally
+;; on debian, run 'apt install elpa-lsp-mode'
 
 (use-package lsp-mode
       :hook ((lsp-mode . lsp-diagnostics-mode)
-             (lsp-mode . lsp-enable-which-key-integration)
-             ((tsx-ts-mode
-               typescript-ts-mode
-               js-ts-mode) . lsp-deferred)))
+             (lsp-mode . lsp-enable-which-key-integration)))
 
 (use-package lsp-ui
   :commands lsp-ui-mode)
@@ -558,7 +557,9 @@
   (setq dired-sidebar-use-term-integration t)
   (setq dired-sidebar-use-custom-font t))
 
-;; treesitter
+;; tree-sitter
+;; make sure that tree-sitter is installed locally
+;; in Debian, run 'sudo apt-get install libtree-sitter-dev'
 
 ;; launches only on graphic sessions
 
