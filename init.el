@@ -153,7 +153,7 @@
 ;;  :custom
 ;;  (mouse-wheel-scroll-amount '(1 ((shift) . 1)))
 ;;  (mouse-wheel-progressive-speed nil)
-b;;  (mouse-wheel-follow-mouse 't)
+;;  (mouse-wheel-follow-mouse 't)
 ;;:config
 ;;(setq scroll-step 1)
 ;;(setq scroll-conservatively 1000))
