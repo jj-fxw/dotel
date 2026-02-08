@@ -642,6 +642,7 @@
 
 (global-set-key (kbd "C-M-]") 'restart-emacs)
 (global-set-key (kbd "C-x C-<return>") 'minimap-mode)
+(global-set-key (kbd "C-x C-p") 'minimap-mode)
 
 ;; the below binding assumes that vterm should only be launched in a
 ;; graphic session
