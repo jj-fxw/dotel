@@ -309,7 +309,11 @@
 
 ;; renpy mode - to enable highlighting in renpy
 
- (use-package renpy-mode)
+(use-package renpy-mode)
+
+;; typescript mode - to enable highlighting in typescript
+
+(use-package typescript-mode)
 
 ;; goggles - pulse modified region
 
@@ -557,7 +561,10 @@
 ;; make sure that tree-sitter is installed locally
 ;; in Debian, run 'sudo apt-get install libtree-sitter-dev'
 
-(use-package tree-sitter
+;; launches only on graphic sessions
+
+(if (display-graphic-p)
+    (use-package tree-sitter
       :mode (("\\.tsx\\'" . tsx-ts-mode)
              ("\\.js\\'"  . typescript-ts-mode)
              ("\\.mjs\\'" . typescript-ts-mode)
@@ -613,7 +620,7 @@
                  (sh-base-mode . bash-ts-mode)))
         (add-to-list 'major-mode-remap-alist mapping))
       :config
-      (os/setup-install-grammars)))
+      (os/setup-install-grammars))))
 
 ;;;
 ;;;
