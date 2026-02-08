@@ -610,17 +610,6 @@
       :config
       (os/setup-install-grammars)))
 
-
-;;;
-;;;
-;;;
-;;;
-;;;
-
-;; preferences
-
-(setq org-link-elisp-confirm-function nil) ;; enables simpler browsing
-
 ;;;
 ;;;
 ;;;
@@ -636,6 +625,15 @@
 (global-set-key (kbd "C-M-]") 'restart-emacs)
 (global-set-key (kbd "C-x C-<return>") 'minimap-mode)
 (global-set-key (kbd "C-c e") 'vterm)
+
+;; thanks
+;; This config has drawn on several sources
+;; I am particualrly indebted to those listed below
+
+;; https://systemcrafters.net/emacs-from-scratch/
+;; https://github.com/DevelopmentCool2449/visual-emacs
+;; https://github.com/zoliky/dotemacs-archived
+;; https://www.ovistoica.com/blog/2024-7-05-modern-emacs-typescript-web-tsx-config
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
