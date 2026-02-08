@@ -276,9 +276,11 @@
 (add-hook 'lsp-mode-hook #'lsp-headerline-breadcrumb-mode)
 
 ;; tailwind specific lsp
+;; this will only run on graphic sessions
 
-(straight-use-package
- '(lsp-tailwindcss :type git :host github :repo "merrickluo/lsp-tailwindcss"))
+(if (display-graphic-p)
+    (straight-use-package
+     '(lsp-tailwindcss :type git :host github :repo "merrickluo/lsp-tailwindcss"))
 
     (use-package lsp-tailwindcss
       :straight '(lsp-tailwindcss :type git :host github :repo "merrickluo/lsp-tailwindcss")
@@ -293,7 +295,7 @@
                  js2-mode
                  js-ts-mode
                  clojure-mode))
-        (add-to-list 'lsp-tailwindcss-major-modes tw-major-mode)))
+        (add-to-list 'lsp-tailwindcss-major-modes tw-major-mode))))
 
 ;; company-mode - provides pop-up autocompletion from the lsp
 
@@ -400,7 +402,6 @@
     (progn
       (minimap-mode 1))
   (progn
-
   (minimap-mode -1)))
 
 ;; magit - for using git with a gui
